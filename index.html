@@ -2,6 +2,219 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>Ashley Gigon - Engineering Portfolio</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom, #0f172a, #1e3a8a);
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin: 10px 0;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      font-style: italic;
+      margin: 0;
+    }
+
+    /* Scroll Arrow */
+    .scroll-circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      margin: 1.5rem auto 0;
+      border: 2px solid #ffffffaa;
+      border-radius: 50%;
+      color: #ffffffcc;
+      font-size: 1.5rem;
+      animation: bounce 2s infinite;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .scroll-circle:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(6px); }
+    }
+
+    /* Projects Section */
+    #projects {
+      background: rgba(255, 255, 255, 0.05);
+      margin: 60px auto;
+      padding: 40px 20px;
+      border-radius: 16px;
+      max-width: 800px;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      background: #ffffff22;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .tab.active {
+      background: #ffffff44;
+    }
+
+    .tab-content {
+      display: none;
+      text-align: left;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    img.project-image {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h2>Engineering Portfolio:</h2>
+    <h1>Ashley Gigon</h1>
+    <p>Showcasing some of my engineering projects</p>
+    <div class="scroll-circle" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">&#x2193;</div>
+  </div>
+
+
+<!-- About Me Section -->
+<div id="about" style="
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+">
+
+  <!-- Left Side: Image -->
+  <div style="flex: 1; min-width: 250px; text-align: center;">
+    <img src="headshotphoto.png" alt="Photo of Ashley" style="
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    ">
+  </div>
+
+  <!-- Right Side: Text -->
+  <div style="flex: 2; min-width: 250px;">
+    <h2 style="margin-top: 0;">About Me</h2>
+    <p style="font-size: 1.1rem; line-height: 1.6;">
+      Hi! I'm Ashley Gigon, a mechanical engineer with a strong foundation in physics and a passion for robotics, control systems, and engineering design.
+      I hold a BS in Physics, a BS and MS in Mechanical Engineering, and specialize in robotics and control systems.
+      <br><br>
+      I enjoy solving real-world problems through design, prototyping, and systems thinking. Outside of engineering, I’m an avid runner, traveler, and lifelong learner.
+    </p>
+  </div>
+</div>
+
+
+
+  <!-- Projects Section -->
+
+  <!-- Project #1 -->
+  <div id="projects">
+        <div class="tabs">
+          <button class="tab active" onclick="showTab(0)">Project 1</button>
+          <button class="tab" onclick="showTab(1)">Project 2</button>
+          <button class="tab" onclick="showTab(2)">Project 3</button>
+        </div>
+
+        <div class="tab-content active">
+      <h2>Project One</h2>
+
+      <div style="margin-top: 1rem;">
+        <h3>Description</h3>
+        <p>
+          This is where you can describe Project One in more detail. 
+          Explain what the project is, what technologies you used, the problem it solves, or anything interesting about the process or results.
+        </p>
+      </div>
+
+      <div style="margin-top: 1.5rem;">
+        <h3>Image</h3>
+        <img class="project-image" src="your-image-url-1.jpg" alt="Screenshot or photo of Project One">
+      </div>
+   </div>
+
+
+    <div class="tab-content">
+      <h2>Project 2 Title</h2>
+      <p>This is a description of Project 2. It explores...</p>
+      <img class="project-image" src="your-image-url-2.jpg" alt="Project 2 Image">
+    </div>
+
+    <div class="tab-content">
+      <h2>Project 3 Title</h2>
+      <p>This is a description of Project 3. It demonstrates...</p>
+      <img class="project-image" src="your-image-url-3.jpg" alt="Project 3 Image">
+    </div>
+  </div>
+
+  <script>
+    function showTab(index) {
+      const tabs = document.querySelectorAll('.tab');
+      const contents = document.querySelectorAll('.tab-content');
+      tabs.forEach((tab, i) => {
+        tab.classList.toggle('active', i === index);
+        contents[i].classList.toggle('active', i === index);
+      });
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
   <title>Ashley Gigon</title>
   <style>
     body {
@@ -15,8 +228,8 @@
     }
     h1 {
     text-align: center;
-    font-size: 5rem;
-    margin-top: 1.5rem 0 0.25rem;
+    font-size: 3.5rem;
+    margin-top: 1.5rem 0 0.2rem;
     color: #ffffff;
     text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.1);
     }
@@ -51,10 +264,12 @@
   </style>
 </head>
 <body>
-  <h1>ENGINEERING PORTFOLIO: ASHLEY GIGON</h1>
+  <h1>ENGINEERING PORTFOLIO:
+    ASHLEY GIGON</h1>
+  -->
   <!--<p> Hi! I'm Ashley, a mechanical engineer with a BS in Physics, a BS and MS in Mechanical Engineering focusing on Robotics and Controls.
     I'm passionate about engineering design, running, traveling, and continuous learning.</p> -->
-  <p style="text-align: center; font-style: italic; margin-top: 1.25rem; color: #ffffff;">
+  <!--<p style="text-align: center; font-style: italic; margin-top: 1.25rem; color: #ffffff;">
   Showcasing some engineering projects that I have created
   </p>
   
@@ -97,3 +312,4 @@
 
 </body>
 </html>
+-->
