@@ -19,6 +19,31 @@
       flex-direction: column;
     }
 
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.2s ease;
+    }
+
+    .navbar a:hover {
+      color: #60a5fa;
+    }
+
     .content {
       flex: 1;
     }
@@ -108,6 +133,7 @@
       border-radius: 8px;
       margin-top: 1rem;
     }
+
     footer {
       position: fixed;
       bottom: 0;
@@ -124,6 +150,15 @@
   </style>
 </head>
 <body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Engineering Projects</a>
+    <a href="#research">Research</a>
+  </nav>
+
   <div class="content">
 
     <!-- Hero Section -->
@@ -148,6 +183,12 @@
           I enjoy solving real-world problems through design, prototyping, and systems thinking. Outside of engineering, I’m an avid runner, traveler, and lifelong learner.
         </p>
       </div>
+    </div>
+
+    <!-- Experience Section (Placeholder) -->
+    <div id="experience" style="max-width: 900px; margin: 60px auto; padding: 40px 20px; background: rgba(255,255,255,0.05); border-radius: 16px;">
+      <h2>Experience</h2>
+      <p>This section will highlight your professional experience, roles, companies, and skills.</p>
     </div>
 
     <!-- Projects -->
@@ -181,6 +222,12 @@
         <p>This is a description of Project 3...</p>
         <img class="project-image" src="your-image-url-3.jpg" alt="Project 3 Image">
       </div>
+    </div>
+
+    <!-- Research Section (Placeholder) -->
+    <div id="research" style="max-width: 900px; margin: 60px auto; padding: 40px 20px; background: rgba(255,255,255,0.05); border-radius: 16px;">
+      <h2>Research & Publications</h2>
+      <p>Include details about academic research, publications, or technical papers you've contributed to.</p>
     </div>
 
     <!-- Contact -->
