@@ -15,11 +15,24 @@
     }
     h1 {
     text-align: center;
-    font-size: 2.5rem;
-    margin-top: 2rem;
+    font-size: 3rem;
+    margin-top: 1.5rem 0 0.25rem;
     color: #ffffff;
     text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.1);
     }
+    .scroll-arrow {
+      text-align: center;
+      font-size: 2rem;
+      color: #ffffffaa;
+      animation: bounce 2s infinite;
+      margin-top: 0.5rem;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(6px); }
+    }
+
     h2 {
       color: #000;
     }
@@ -41,9 +54,11 @@
   <h1>ENGINEERING PORTFOLIO: ASHLEY GIGON</h1>
   <p> Hi! I'm Ashley, a mechanical engineer with a BS in Physics, a BS and MS in Mechanical Engineering focusing on Robotics and Controls.
     I'm passionate about engineering design, running, traveling, and continuous learning.</p>
-  <p style="text-align: center; font-style: italic; margin-top: -1rem; color: #ffffff;">
+  <p style="text-align: center; font-style: italic; margin-top: 1.25rem; color: #ffffff;">
   Showcasing some engineering projects that I have created
   </p>
+  
+  <div class="scroll-arrow">&#x2193;</div>
 
   <h2>Contact Me</h2>
   <p>Email: <a href="mailto:ashleygigon@gmail.com">ashleygigon@gmail.com</a></p>
