@@ -80,14 +80,16 @@ html, body {
   display: flex;
   gap: 30px;
   align-items: flex-start;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 /* Left column: Title and photo stacked vertically */
 .about-left {
   display: flex;
   flex-direction: column;
-  min-width: 280px;
+  min-width: 300px;
+  max-width: 320px;
 }
 
 .about-left h2 {
@@ -98,7 +100,7 @@ html, body {
 
 .about-photo img {
   width: 100%;
-  max-width: 280px;
+  max-width: 300px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   margin-left: 0;
@@ -106,10 +108,11 @@ html, body {
 
 /* Right column: Text and social links */
 .about-right {
-  flex: 1;
+  flex: 2 1 400px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  min-width: 300px;
 }
 
 .about-text {
@@ -121,8 +124,9 @@ html, body {
 /* Social links container */
 .social-links {
   display: flex;
+  margin-top: auto;
   justify-content: flex-end;
-  gap: 40px;
+  gap: 20px;
 }
 
 .social-links a {
