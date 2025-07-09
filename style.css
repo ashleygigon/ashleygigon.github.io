@@ -303,3 +303,63 @@ footer a {
 
 /* THIS IS ALL FOR THE EXPERIENCE PAGE*/
 
+/* Hero title section */
+.experience-hero {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  text-align: center;
+  color: white;
+}
+
+.experience-hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Experience list section */
+.experience-list {
+  max-width: 900px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Each experience card */
+.experience-card {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 20px;
+  align-items: center;
+  color: white;
+  backdrop-filter: blur(4px);
+}
+
+/* Image section */
+.experience-image img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Text section */
+.experience-text {
+  margin-left: 20px;
+  flex: 1;
+}
+
+.experience-text h3 {
+  margin: 0 0 5px;
+  font-size: 1.5rem;
+}
+
+.experience-text p {
+  margin: 4px 0;
+}
