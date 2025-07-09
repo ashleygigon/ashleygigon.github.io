@@ -104,7 +104,9 @@ html, body {
   min-width: 300px;
   font-size: 1.1rem;
   line-height: 1.6;
+  flex-wrap: wrap;
 }
+
 /*this is the education text box */
 .education-section {
   max-width: 900px; /* match about section */
