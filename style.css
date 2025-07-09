@@ -13,7 +13,7 @@ html, body {
   display: flex;
   flex-direction: column;
 }
-/* navigation bar style */
+
 .navbar {
   position: sticky;
   top: 0;
@@ -41,7 +41,8 @@ html, body {
 .content {
   flex: 1;
 }
-/* hero section styles */
+
+/* Hero Section */
 .hero {
   text-align: center;
   padding: 100px 20px 60px;
@@ -57,38 +58,40 @@ html, body {
   font-style: italic;
   margin: 0;
 }
-/*this is the about me section box width */
-.section-box {
-  max-width: 900px;
-  margin: 60px auto;
-  padding: 40px 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
+
+/* Page Break Line after Hero */
+.page-break {
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff44;
+  margin: 40px 0;
 }
-/*this is the about me section in the box */
+
+/* About Me Section */
 .about-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  align-items: flex-start; /* Changed to flex-start for better alignment */
-  margin: 60px auto;
   max-width: 900px;
+  margin: 0 auto 60px;
   padding: 40px 30px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
   color: white;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: nowrap;
 }
 
-/*this is the about me photo */
-.about-photo {
-  flex: 1;
+/* Left column: Title and photo stacked vertically */
+.about-left {
+  display: flex;
+  flex-direction: column;
   min-width: 280px;
-  text-align: left;
 }
 
-.about-photo h2 {
+.about-left h2 {
   font-size: 1.8rem;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 .about-photo img {
@@ -98,18 +101,43 @@ html, body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   margin-left: 0;
 }
-/*this is the about me text box */
-.text-block {
-  flex: 2;
-  min-width: 300px;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  
+
+/* Right column: Text and social links */
+.about-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-/*this is the education text box */
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Social links container */
+.social-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+.social-links a {
+  color: #60a5fa;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #90caff;
+}
+
+/* Education Section */
 .education-section {
-  max-width: 900px; /* match about section */
+  max-width: 900px;
   margin: 60px auto;
   padding: 40px 30px;
   background: rgba(255, 255, 255, 0.05);
@@ -117,26 +145,21 @@ html, body {
   color: white;
   text-align: center;
 }
-/* Logos section title */
+
 .education-section h2 {
   font-size: 2rem;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   text-align: center;
 }
 
-/* Logos container with spacing */
 .edu-logos {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: space-evenly;
   gap: 40px;
   flex-wrap: nowrap;
-  gap: 40px;
-  margin-top: 30px;
 }
 
-/* Each logo block */
 .edu-logos div {
   flex: 1 1 0;
   min-width: 300px;
@@ -147,24 +170,15 @@ html, body {
   align-items: center;
 }
 
-/* Logo image */
 .edu-logos img {
-  max-width: 400px;
+  max-width: 300px;
   width: 100%;
   height: auto;
   margin-bottom: 15px;
-  /*display: block;*/
-  margin-left: auto;
-  margin-right: auto;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* Description text under each logo */
 .edu-logos p {
-  /*margin-top: 8px;
-  font-size: 1rem;
-  line-height: 1.4;
-  color: #fff;*/
   margin-top: 0;
   font-size: 1.1rem;
   line-height: 1.4;
@@ -174,10 +188,19 @@ html, body {
   margin-right: auto;
 }
 
-/*this is the skills section */
-.skills-section {
+/* Skills and Honors Section Container */
+.skills-honors-container {
   max-width: 900px;
-  margin: 40px auto;
+  margin: 60px auto;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Skills Box */
+.skills-section {
+  flex: 1;
+  min-width: 300px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
   padding: 40px 30px;
@@ -192,10 +215,11 @@ html, body {
   line-height: 1.8;
   padding-left: 20px;
 }
-/*this is the honors section */
+
+/* Honors Box */
 .honors-section {
-  max-width: 900px;
-  margin: 40px auto;
+  flex: 1;
+  min-width: 300px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
   padding: 40px 30px;
@@ -211,21 +235,17 @@ html, body {
   padding-left: 20px;
 }
 
-.link-highlight {
-  color: #60a5fa;
-  text-decoration: underline;
+/* Contact Form Section */
+.contact-section {
+  max-width: 900px;
+  margin: 60px auto 80px;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  color: white;
 }
 
-.link-highlight:hover {
-  color: #90caff;
-}
-
-.image-block img {
-  max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
+/* Contact Form Inputs & Button */
 form input,
 form textarea {
   width: 100%;
@@ -245,6 +265,7 @@ form button {
   font-weight: bold;
 }
 
+/* Footer */
 footer {
   background-color: #0f172a;
   color: #ffffffaa;
@@ -253,6 +274,7 @@ footer {
   font-size: 0.9rem;
   border-top: 1px solid #ffffff22;
 }
+
 footer a {
   color: #60a5fa;
   text-decoration: none;
