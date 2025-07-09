@@ -42,6 +42,8 @@ html, body {
   flex: 1;
 }
 
+/* THIS IS ALL FOR THE ABOUT ME PAGE*/
+
 /* Hero Section */
 .hero {
   text-align: center;
@@ -297,3 +299,7 @@ footer a {
   color: #60a5fa;
   text-decoration: none;
 }
+
+
+/* THIS IS ALL FOR THE EXPERIENCE PAGE*/
+
