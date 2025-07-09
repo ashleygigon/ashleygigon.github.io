@@ -306,6 +306,7 @@ footer a {
 /* Hero title section */
 .experience-hero {
   max-width: 900px;
+  min-width: 900px;
   margin: 80px auto;
   padding: 60px 20px;
   background: rgba(255, 255, 255, 0.05);
@@ -315,7 +316,7 @@ footer a {
 }
 
 .experience-hero h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: bold;
   margin: 0;
 }
@@ -323,6 +324,7 @@ footer a {
 /* Experience list section */
 .experience-list {
   max-width: 900px;
+  min-width: 900px;
   margin: 40px auto;
   display: flex;
   flex-direction: column;
