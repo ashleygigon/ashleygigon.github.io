@@ -48,7 +48,7 @@ html, body {
 }
 
 .hero h2, .hero h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin: 10px 0;
 }
 
@@ -57,7 +57,7 @@ html, body {
   font-style: italic;
   margin: 0;
 }
-
+/*this is the about me section box width */
 .section-box {
   max-width: 900px;
   margin: 60px auto;
@@ -65,7 +65,7 @@ html, body {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
 }
-
+/*this is the about me section box width */
 .about-container {
   display: flex;
   flex-wrap: wrap;
@@ -78,11 +78,11 @@ html, body {
   border-radius: 16px;
   color: white;
 }
-
+/*this is the about me photo */
 .about-photo {
   flex: 1;
-  min-width: 220px;
-  text-align: center;
+  min-width: 280px;
+  text-align: left;
 }
 
 .about-photo h2 {
@@ -92,9 +92,10 @@ html, body {
 
 .about-photo img {
   width: 100%;
-  max-width: 250px;
+  max-width: 280px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  margin-left: 0;
 }
 
 .text-block {
