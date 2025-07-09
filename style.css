@@ -107,7 +107,7 @@ html, body {
 }
 /*this is the education text box */
 .education-section {
-  max-width: 1000px; /* match about section */
+  max-width: 900px; /* match about section */
   margin: 60px auto;
   padding: 40px 30px;
   background: rgba(255, 255, 255, 0.05);
@@ -126,38 +126,50 @@ html, body {
 /* Logos container with spacing */
 .edu-logos {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 40px;
   margin-top: 30px;
 }
 
 /* Each logo block */
 .edu-logos div {
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 220px;
+  max-width: 300px;
   text-align: center;
-  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Logo image */
 .edu-logos img {
-  max-width: 120px;
+  max-width: 280px;
   width: 100%;
   height: auto;
-  margin-bottom: 10px;
-  display: block;
+  margin-bottom: 15px;
+  /*display: block;*/
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 /* Description text under each logo */
 .edu-logos p {
-  margin-top: 8px;
+  /*margin-top: 8px;
   font-size: 1rem;
   line-height: 1.4;
-  color: #fff;
+  color: #fff;*/
+  margin-top: 0;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: white;
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*this is the skills section */
