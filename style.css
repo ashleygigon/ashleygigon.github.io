@@ -270,6 +270,14 @@ form button {
   cursor: pointer;
   font-weight: bold;
 }
+.section-container {
+  max-width: 900px; /* Match this to your About section */
+  margin: 80px auto;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  color: #ffffff;
+}
 
 /* Footer */
 footer {
