@@ -5,7 +5,7 @@
   <title>Projects - Ashley Gigon</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Title styling */
+    /* Page Title */
     .projects-title {
       text-align: center;
       font-size: 3rem;
@@ -13,13 +13,34 @@
       margin: 80px 20px 40px;
     }
 
-    /* Tab button row */
-    .tab-buttons {
+    /* Tab Bar Container */
+    .tab-nav-container {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
+      align-items: center;
+      gap: 10px;
       margin-bottom: 30px;
+      overflow-x: auto;
+    }
+
+    /* Arrows */
+    .tab-arrow {
+      font-size: 2rem;
+      background: none;
+      border: none;
+      color: #60a5fa;
+      cursor: pointer;
+      padding: 0 10px;
+      user-select: none;
+    }
+
+    /* Tab Buttons Row */
+    .tab-buttons {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 10px;
     }
 
     .tab-button {
@@ -30,6 +51,7 @@
       border-radius: 999px;
       font-weight: bold;
       cursor: pointer;
+      white-space: nowrap;
       transition: background-color 0.3s ease;
     }
 
@@ -38,7 +60,7 @@
       background-color: #60a5fa;
     }
 
-    /* Project content section */
+    /* Project Content */
     .project-content {
       display: none;
       max-width: 900px;
@@ -72,10 +94,15 @@
       line-height: 1.6;
       margin-top: 20px;
     }
+
+    /* Smooth scroll for horizontal tab area */
+    .tab-buttons::-webkit-scrollbar {
+      display: none;
+    }
   </style>
 </head>
 <body>
-  <!-- Navigation -->
+  <!-- Navbar -->
   <nav class="navbar">
     <a href="index.html">About</a>
     <a href="experience.html">Experience</a>
@@ -87,11 +114,17 @@
     <!-- Title -->
     <h1 class="projects-title">Projects</h1>
 
-    <!-- Tab Buttons -->
-    <div class="tab-buttons">
-      <button class="tab-button active" onclick="showProject('project1')">Project 1</button>
-      <button class="tab-button" onclick="showProject('project2')">Project 2</button>
-      <button class="tab-button" onclick="showProject('project3')">Project 3</button>
+    <!-- Tab Navigation with Arrows -->
+    <div class="tab-nav-container">
+      <button class="tab-arrow" onclick="scrollTabs(-200)">&#8592;</button>
+      <div class="tab-buttons" id="tabButtons">
+        <button class="tab-button active" onclick="showProject('project1', this)">Project 1</button>
+        <button class="tab-button" onclick="showProject('project2', this)">Project 2</button>
+        <button class="tab-button" onclick="showProject('project3', this)">Project 3</button>
+        <button class="tab-button" onclick="showProject('project4', this)">Project 4</button>
+        <button class="tab-button" onclick="showProject('project5', this)">Project 5</button>
+      </div>
+      <button class="tab-arrow" onclick="scrollTabs(200)">&#8594;</button>
     </div>
 
     <!-- Project 1 -->
@@ -101,7 +134,7 @@
         <img src="project1a.png" alt="Project 1 Image A" />
       </div>
       <div class="project-description">
-        <p>This is a description of Project 1. It includes the tools used, goals, results, and your role in the project.</p>
+        <p>This is a description of Project 1. It includes your role, tools used, and results.</p>
       </div>
     </div>
 
@@ -113,7 +146,7 @@
         <img src="project2b.png" alt="Project 2 Image B" />
       </div>
       <div class="project-description">
-        <p>This project used multiple systems and includes a description of your design approach and contributions.</p>
+        <p>This project used multiple tools. You designed, tested, and implemented key features.</p>
       </div>
     </div>
 
@@ -124,7 +157,29 @@
         <img src="project3.png" alt="Project 3 Image" />
       </div>
       <div class="project-description">
-        <p>A summary of Project 3’s problem, your role, and final results. You can add more images or text as needed.</p>
+        <p>A technical write-up about Project 3. You can describe collaboration, engineering process, or results here.</p>
+      </div>
+    </div>
+
+    <!-- Placeholder Project 4 -->
+    <div id="project4" class="project-content">
+      <h2>Project 4 Title</h2>
+      <div class="project-images">
+        <img src="project4.png" alt="Project 4 Image" />
+      </div>
+      <div class="project-description">
+        <p>Project 4 description goes here. Add more projects or duplicate this block.</p>
+      </div>
+    </div>
+
+    <!-- Placeholder Project 5 -->
+    <div id="project5" class="project-content">
+      <h2>Project 5 Title</h2>
+      <div class="project-images">
+        <img src="project5.png" alt="Project 5 Image" />
+      </div>
+      <div class="project-description">
+        <p>Project 5 description. Add tools, goals, or results here.</p>
       </div>
     </div>
   </div>
@@ -138,16 +193,18 @@
     </p>
   </footer>
 
+  <!-- JS for Tabs + Scrolling -->
   <script>
-    function showProject(id) {
-      const buttons = document.querySelectorAll(".tab-button");
-      const projects = document.querySelectorAll(".project-content");
-
-      buttons.forEach((btn) => btn.classList.remove("active"));
-      projects.forEach((proj) => proj.classList.remove("active"));
-
+    function showProject(id, button) {
+      document.querySelectorAll(".project-content").forEach(el => el.classList.remove("active"));
       document.querySelector(`#${id}`).classList.add("active");
-      event.target.classList.add("active");
+
+      document.querySelectorAll(".tab-button").forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+    }
+
+    function scrollTabs(amount) {
+      document.getElementById("tabButtons").scrollBy({ left: amount, behavior: 'smooth' });
     }
   </script>
 </body>
