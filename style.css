@@ -13,7 +13,7 @@ html, body {
   display: flex;
   flex-direction: column;
 }
-
+/* navigation bar style */
 .navbar {
   position: sticky;
   top: 0;
@@ -41,7 +41,7 @@ html, body {
 .content {
   flex: 1;
 }
-
+/* hero section styles */
 .hero {
   text-align: center;
   padding: 100px 20px 60px;
@@ -65,7 +65,7 @@ html, body {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
 }
-/*this is the about me section box width */
+/*this is the about me section in the box */
 .about-container {
   display: flex;
   flex-wrap: wrap;
@@ -78,6 +78,7 @@ html, body {
   border-radius: 16px;
   color: white;
 }
+
 /*this is the about me photo */
 .about-photo {
   flex: 1;
@@ -97,14 +98,14 @@ html, body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   margin-left: 0;
 }
-
+/*this is the about me text box */
 .text-block {
   flex: 2;
-  min-width: 250px;
+  min-width: 300px;
   font-size: 1.1rem;
   line-height: 1.6;
 }
-
+/*this is the education text box */
 .education-section {
   max-width: 900px;
   margin: 40px auto;
@@ -117,7 +118,7 @@ html, body {
 .education-section h2 {
   margin-top: 0;
 }
-
+/*this is the education logos */
 .edu-logos {
   display: flex;
   flex-wrap: wrap;
@@ -137,7 +138,7 @@ html, body {
   height: auto;
   margin-bottom: 8px;
 }
-
+/*this is the skills section */
 .skills-section {
   max-width: 900px;
   margin: 40px auto;
@@ -155,7 +156,7 @@ html, body {
   line-height: 1.8;
   padding-left: 20px;
 }
-
+/*this is the honors section */
 .honors-section {
   max-width: 900px;
   margin: 40px auto;
@@ -220,74 +221,3 @@ footer a {
   color: #60a5fa;
   text-decoration: none;
 }
-.about-container {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      gap: 30px;
-      margin: 60px auto;
-      max-width: 1000px;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 16px;
-    }
-
-    .about-photo {
-      flex: 1;
-      min-width: 350px;
-    }
-
-    .about-photo img {
-      width: 100%;
-      max-width: 240px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-
-    .about-text {
-      flex: 2;
-      min-width: 300px;
-    }
-
-    .section-title {
-      font-size: 2rem;
-      margin: 40px auto 20px;
-      max-width: 1000px;
-      padding-left: 20px;
-    }
-
-    .edu-logos {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin: 20px auto;
-      flex-wrap: wrap;
-    }
-
-    .edu-logos div {
-      text-align: center;
-    }
-
-    .edu-logos img {
-      max-width: 120px;
-    }
-
-    .section-box {
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 16px;
-    }
-
-    .section-box ul {
-      padding-left: 20px;
-    }
-
-    .white-line {
-      border: none;
-      height: 1px;
-      background-color: #ffffff44;
-      margin: 30px 0;
-      width: 100%;
-    }
