@@ -4,6 +4,75 @@
   <meta charset="UTF-8" />
   <title>Projects - Ashley Gigon</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Title styling */
+    .projects-title {
+      text-align: center;
+      font-size: 3rem;
+      color: white;
+      margin: 80px 20px 40px;
+    }
+
+    /* Tab button row */
+    .tab-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .tab-button {
+      background-color: transparent;
+      color: #fff;
+      border: 2px solid #60a5fa;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .tab-button.active,
+    .tab-button:hover {
+      background-color: #60a5fa;
+    }
+
+    /* Project content section */
+    .project-content {
+      display: none;
+      max-width: 900px;
+      margin: 0 auto 60px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      color: white;
+    }
+
+    .project-content.active {
+      display: block;
+    }
+
+    .project-images {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .project-images img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .project-description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation -->
@@ -14,55 +83,50 @@
     <a href="research.html">Research</a>
   </nav>
 
-  <!-- Page Content -->
   <div class="content">
+    <!-- Title -->
+    <h1 class="projects-title">Projects</h1>
 
-    <!-- Hero Title -->
-    <section class="experience-hero">
-      <h1>Projects</h1>
-    </section>
+    <!-- Tab Buttons -->
+    <div class="tab-buttons">
+      <button class="tab-button active" onclick="showProject('project1')">Project 1</button>
+      <button class="tab-button" onclick="showProject('project2')">Project 2</button>
+      <button class="tab-button" onclick="showProject('project3')">Project 3</button>
+    </div>
 
-    <!-- Projects Section -->
-    <section class="experience-list">
-
-      <!-- Project 1 -->
-      <div class="experience-card">
-        <div class="experience-image">
-          <img src="project1.png" alt="Project 1 image" />
-        </div>
-        <div class="experience-text">
-          <h3>Project Title 1</h3>
-          <p><em>Tools: Python, SolidWorks</em></p>
-          <p>Description of the project, your role, and what you accomplished.</p>
-        </div>
+    <!-- Project 1 -->
+    <div id="project1" class="project-content active">
+      <h2>Project 1 Title</h2>
+      <div class="project-images">
+        <img src="project1a.png" alt="Project 1 Image A" />
       </div>
-
-      <!-- Project 2 with two images -->
-      <div class="experience-card">
-        <div class="experience-image" style="display: flex; flex-direction: column; gap: 10px;">
-          <img src="project2a.png" alt="Project 2 image A" />
-          <img src="project2b.png" alt="Project 2 image B" />
-        </div>
-        <div class="experience-text">
-          <h3>Project Title 2</h3>
-          <p><em>Tools: Arduino, MATLAB</em></p>
-          <p>Overview of the project with multiple images. Describe the design, testing, and results.</p>
-        </div>
+      <div class="project-description">
+        <p>This is a description of Project 1. It includes the tools used, goals, results, and your role in the project.</p>
       </div>
+    </div>
 
-      <!-- Project 3 -->
-      <div class="experience-card">
-        <div class="experience-image">
-          <img src="project3.png" alt="Project 3 image" />
-        </div>
-        <div class="experience-text">
-          <h3>Project Title 3</h3>
-          <p><em>Tools: Fusion 360, Raspberry Pi</em></p>
-          <p>Summary of your goals, contributions, and outcomes.</p>
-        </div>
+    <!-- Project 2 -->
+    <div id="project2" class="project-content">
+      <h2>Project 2 Title</h2>
+      <div class="project-images">
+        <img src="project2a.png" alt="Project 2 Image A" />
+        <img src="project2b.png" alt="Project 2 Image B" />
       </div>
+      <div class="project-description">
+        <p>This project used multiple systems and includes a description of your design approach and contributions.</p>
+      </div>
+    </div>
 
-    </section>
+    <!-- Project 3 -->
+    <div id="project3" class="project-content">
+      <h2>Project 3 Title</h2>
+      <div class="project-images">
+        <img src="project3.png" alt="Project 3 Image" />
+      </div>
+      <div class="project-description">
+        <p>A summary of Project 3’s problem, your role, and final results. You can add more images or text as needed.</p>
+      </div>
+    </div>
   </div>
 
   <!-- Footer -->
@@ -73,5 +137,18 @@
       <a href="https://linkedin.com/in/ashleygigon" style="color: #60a5fa;">LinkedIn</a>
     </p>
   </footer>
+
+  <script>
+    function showProject(id) {
+      const buttons = document.querySelectorAll(".tab-button");
+      const projects = document.querySelectorAll(".project-content");
+
+      buttons.forEach((btn) => btn.classList.remove("active"));
+      projects.forEach((proj) => proj.classList.remove("active"));
+
+      document.querySelector(`#${id}`).classList.add("active");
+      event.target.classList.add("active");
+    }
+  </script>
 </body>
 </html>
