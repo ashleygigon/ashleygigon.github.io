@@ -115,7 +115,7 @@ html, body {
   color: white;
   text-align: center;
 }
-
+/* Logos section title */
 .education-section h2 {
   font-size: 2rem;
   margin-top: 0;
@@ -126,10 +126,12 @@ html, body {
 /* Logos container with spacing */
 .edu-logos {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
+  gap: 40px;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 40px;
+  margin-top: 30px;
 }
 
 /* Each logo block */
@@ -142,8 +144,12 @@ html, body {
 /* Logo image */
 .edu-logos img {
   max-width: 120px;
+  width: 100%;
   height: auto;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Description text under each logo */
