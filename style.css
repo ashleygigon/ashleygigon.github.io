@@ -249,6 +249,7 @@ html, body {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
   color: white;
+  box-sizing: border-box;
 }
 
 /* Contact Form Inputs & Button */
@@ -259,6 +260,7 @@ form textarea {
   margin-bottom: 15px;
   border-radius: 8px;
   border: none;
+  box-sizing: border-box;
 }
 
 form button {
@@ -277,6 +279,8 @@ form button {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
   color: #ffffff;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 /* Footer */
