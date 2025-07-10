@@ -107,6 +107,19 @@
       transition: background-color 0.3s ease;
     }
 
+    /* Animation for scrolling fade-in */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade-in-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
     @keyframes bounce {
       0%, 100% {
         transform: translateY(0);
