@@ -92,6 +92,30 @@
       line-height: 1.6;
       margin-top: 20px;
     }
+    .bouncing-arrow {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border: 2px solid white;
+      border-radius: 50%;
+      color: white;
+      font-size: 2rem;
+      line-height: 50px;
+      text-align: center;
+      animation: bounce 1.5s infinite;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(8px);
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -123,7 +147,7 @@
     <!-- Left: Description -->
     <div style="flex: 1 1 400px; min-width: 300px;">
       <p class="project-description">
-        Thisresearch study aims to redesign soccer cleats for female soccer players to reduce the likelihood of anterior cruciate ligament (ACL) tears. 
+        This research study aims to redesign soccer cleats for female soccer players to reduce the likelihood of anterior cruciate ligament (ACL) tears. 
         Females are up to eight times more likely to tear their ACL in comparison to males, and soccer cleats are mainly designed for men with women's cleats lacking comfort and performance.
         We propose an alternative design by varying the density of the outsole to relieve pressure off the knee. Our design redistributes the forces on the foot to achieve an optimal valgus and knee flexion angle, putting female soccer players less at risk, thus reducing the forces that lead to ACL injuries.
         Seven different outsole density patterns were designed based on the Nike Premier FG 3 and then printed with Ultimakers out of thermoplastic polyurethane using support blockers in Cura.
@@ -138,10 +162,10 @@
     </div>
   </div>
 
-  <!-- Page break and arrow -->
+  <!-- Page break and bouncing arrow -->
   <div style="text-align: center; margin: 40px 0;">
-    <hr style="border: none; height: 2px; background: #ffffff44; width: 80%; margin-bottom: 10px;">
-    <div style="font-size: 2rem; color: #60a5fa;">&#8595;</div>
+    <hr style="border: none; height: 2px; background: #ffffff44; width: 80%; margin-bottom: 20px;">
+    <div class="bouncing-arrow">&#8595;</div>
   </div>
 
   <!-- Poster image at bottom -->
