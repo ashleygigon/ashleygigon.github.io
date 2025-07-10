@@ -118,17 +118,7 @@
       opacity: 1;
       transform: translateY(0);
     }
-
-
-    @keyframes bounce {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(8px);
-      }
-    }
-/* poster section */
+    /*poster part*/
     .poster-container {
       margin-top: 60px;
       padding: 40px 20px;
@@ -142,6 +132,16 @@
     .poster-image {
       display: flex;
       justify-content: center;
+    }
+
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(8px);
+      }
     }
 
   </style>
@@ -196,14 +196,18 @@
     <div class="bouncing-arrow">&#8595;</div>
   </div>
 
-
-    <!-- Poster Section -->
-    <div class="poster-container fade-in-up">
-      <h3 style="text-align: center; color: white; margin-bottom: 20px;">Final Research Poster</h3>
-      <div class="poster-image">
-        <img src="poster.avif" alt="Poster" style="max-width: 100%; border-radius: 16px;">
-      </div>
-    </div>
+  <!-- Poster image at bottom 
+  <div class="project-images">
+    <img src="poster.avif" alt="Poster" style="max-width: 100%; border-radius: 16px;">
+  </div>
+</div> -->
+<!-- Poster Section -->
+<div class="poster-container fade-in-up">
+  <h3 style="text-align: center; color: white; margin-bottom: 20px;">Final Research Poster</h3>
+  <div class="project-images">
+    <img src="poster.avif" alt="Poster" style="max-width: 100%; border-radius: 16px;">
+  </div>
+</div>
 
 
     <!-- Project 2 -->
